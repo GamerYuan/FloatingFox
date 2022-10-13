@@ -19,7 +19,7 @@ public class WindParticle : MonoBehaviour
 
     void Update()
     {
-        GameObject player = GameObject.Find("TestPlayer");
+        GameObject player = GameObject.Find("player");
 
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
