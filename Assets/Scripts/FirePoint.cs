@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using Cinemachine;
 
 public class FirePoint : MonoBehaviour
 {
 
     public GameObject wind;
-    public GameObject player;
 
     private bool toggle = true;
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class FirePoint : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         float x = cursorPos.x;
