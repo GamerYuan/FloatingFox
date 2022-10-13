@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &9633117 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7928496764237339255, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
-  m_PrefabInstance: {fileID: 7928496764244567850}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wind: {fileID: 5878931990221893252, guid: cd42ca7f3ddf6f44198d8b596caea2f8, type: 3}
-  player: {fileID: 9633117}
+  player: {fileID: 0}
 --- !u!212 &634005082
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -454,42 +449,26 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7928496764244567850
+--- !u!1001 &1851771139
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7928496764237339210, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
-      propertyPath: m_Size.x
-      value: 0.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 7928496764237339210, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
-      propertyPath: m_Size.y
-      value: 0.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 7928496764237339210, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b1bde5c25b5aee841a0c753f6c9d60c9, type: 3}
-    - target: {fileID: 7928496764237339210, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7928496764237339211, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7928496764237339211, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.37
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 7928496764237339211, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: -3.32
       objectReference: {fileID: 0}
     - target: {fileID: 7928496764237339211, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
       propertyPath: m_LocalPosition.z

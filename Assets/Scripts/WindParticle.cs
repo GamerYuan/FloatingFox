@@ -8,6 +8,8 @@ public class WindParticle : MonoBehaviour
 
     public float speed = 10f;
 
+    public GameObject playerPrefab;
+
     Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -19,7 +21,7 @@ public class WindParticle : MonoBehaviour
 
     void Update()
     {
-        GameObject player = GameObject.Find("TestPlayer");
+        GameObject player = GameObject.Find(playerPrefab.name);
 
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
