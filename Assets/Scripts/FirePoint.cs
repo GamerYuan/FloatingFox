@@ -6,8 +6,9 @@ using UnityEngine.Animations;
 public class FirePoint : MonoBehaviour
 {
 
-    public GameObject wind;
-    public GameObject player;
+    public GameObject wind1;
+    public GameObject wind2;
+    public GameObject wind3;
 
     private bool toggle = true;
     // Start is called before the first frame update
@@ -34,9 +35,9 @@ public class FirePoint : MonoBehaviour
         if (toggle)
         {
 
-            Instantiate(wind, transform.position, transform.rotation);
-            Instantiate(wind, new Vector3(x + 0.15f, y + 0.1f, transform.position.z), transform.rotation);
-            Instantiate(wind, new Vector3(x - 0.15f, y - 0.1f, transform.position.z), transform.rotation);
+            Instantiate(wind1, transform.position, transform.rotation);
+            Instantiate(wind2, transform.position, transform.rotation);
+            Instantiate(wind3, transform.position, transform.rotation);
 
         }
     }

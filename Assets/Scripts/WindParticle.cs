@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static UnityEngine.InputManagerEntry;
 
 public class WindParticle : MonoBehaviour
 {
 
     public float speed = 10f;
+    public float delta;
+    private float deltaRad;
 
     public GameObject playerPrefab;
 
@@ -17,7 +21,8 @@ public class WindParticle : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
+        deltaRad = delta * Mathf.Deg2Rad;
+}
 
     void Update()
     {
@@ -33,10 +38,26 @@ public class WindParticle : MonoBehaviour
 
         float hypo = Mathf.Sqrt(x_diff * x_diff + y_diff * y_diff);
 
-        rb.velocity = new Vector2(x_diff / hypo * speed, y_diff / hypo * speed);
+        float cosine = x_diff / hypo;
+        float sine = y_diff / hypo;
+
+        float x = CalculateX(sine, cosine, deltaRad);
+        float y = CalculateY(sine, cosine, deltaRad);
+
+        rb.velocity = new Vector2(x * speed, y * speed);
 
         Destroy(gameObject, 0.4f);
 
+    }
+
+    float CalculateX(float sinei, float cosinei, float d)
+    {
+        return cosinei * Mathf.Cos(d) - sinei * Mathf.Sin(d);
+    }
+
+    float CalculateY(float sinei, float cosinei, float d)
+    {
+        return cosinei * Mathf.Sin(d) + sinei * Mathf.Cos(d);
     }
 
 }
