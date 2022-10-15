@@ -138,4 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 1.025
   riseSpeed: 1
-  drag: 0.5
+  drag: 0.1

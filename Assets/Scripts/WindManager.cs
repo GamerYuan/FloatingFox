@@ -23,9 +23,9 @@ public class WindManager : MonoBehaviour
     {
         GameObject player = GameObject.Find(playerPrefab.name);
 
-        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        Vector3 playerPos = player.transform.position;
+        Vector2 playerPos = player.transform.position;
 
         x_diff = playerPos.x - cursorPos.x;
 
