@@ -139,4 +139,4 @@ MonoBehaviour:
   speed: 10
   delta: -20
   desTime: 0.4
-  playerPrefab: {fileID: 7928496764237339255, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
+  playerPrefab: {fileID: 3086027096112008148, guid: 60f0fb4236464f544bf3ad26acb0e14c, type: 3}
