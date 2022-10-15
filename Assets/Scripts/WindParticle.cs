@@ -10,9 +10,11 @@ public class WindParticle : MonoBehaviour
 
     public float speed = 10f;
     public float delta;
-    private float deltaRad;
+    public float desTime;
 
     public GameObject playerPrefab;
+
+    private float deltaRad;
 
     Rigidbody2D rb;
 
@@ -22,31 +24,27 @@ public class WindParticle : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         deltaRad = delta * Mathf.Deg2Rad;
-}
+    }
 
     void Update()
     {
-        GameObject player = GameObject.Find(playerPrefab.name);
-
-        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        Vector3 playerPos = player.transform.position;
-
-        float x_diff = playerPos.x - cursorPos.x;
-
-        float y_diff = playerPos.y - cursorPos.y;
-
-        float hypo = Mathf.Sqrt(x_diff * x_diff + y_diff * y_diff);
-
-        float cosine = x_diff / hypo;
-        float sine = y_diff / hypo;
-
-        float x = CalculateX(sine, cosine, deltaRad);
-        float y = CalculateY(sine, cosine, deltaRad);
+        float x;
+        float y;
+        
+        if (deltaRad != 0)
+        {
+            x = CalculateX(WindManager.instance.VelY(), WindManager.instance.VelX(), deltaRad);
+            y = CalculateY(WindManager.instance.VelY(), WindManager.instance.VelX(), deltaRad);
+        } 
+        else
+        {
+            x = WindManager.instance.VelX();
+            y = WindManager.instance.VelY();
+        }
 
         rb.velocity = new Vector2(x * speed, y * speed);
 
-        Destroy(gameObject, 0.4f);
+        Destroy(gameObject, desTime);
 
     }
 

@@ -138,4 +138,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   delta: -20
+  desTime: 0.4
   playerPrefab: {fileID: 7928496764237339255, guid: 0e08e5dd27eb2e24eac2d1cc4ba910eb, type: 3}
