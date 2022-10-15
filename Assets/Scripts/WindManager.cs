@@ -7,10 +7,11 @@ public class WindManager : MonoBehaviour
     public GameObject firePoint;
     public GameObject playerPrefab;
 
-    public float x_diff;
-    public float y_diff;
-    public float hypo;
     public static WindManager instance;
+
+    private float x_diff;
+    private float y_diff;
+    private float hypo;
 
     // Start is called before the first frame update
     void Awake()
