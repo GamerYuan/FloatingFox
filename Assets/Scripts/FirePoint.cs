@@ -11,19 +11,13 @@ public class FirePoint : MonoBehaviour
     public GameObject wind3;
 
     private bool toggle = true;
-    // Start is called before the first frame update
 
-    // Update is called once per frame
-    private void Update()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             KeyToggle();
         }
-    }
-
-    void FixedUpdate()
-    {
 
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -31,14 +25,17 @@ public class FirePoint : MonoBehaviour
         float y = cursorPos.y;
 
         transform.position = new Vector2(x, y);
+    }
+
+    void FixedUpdate()
+    {
 
         if (toggle)
         {
-
+            // Toggle on/off wind particles
             Instantiate(wind1, transform.position, transform.rotation);
             Instantiate(wind2, transform.position, transform.rotation);
             Instantiate(wind3, transform.position, transform.rotation);
-
         }
     }
 
@@ -47,7 +44,8 @@ public class FirePoint : MonoBehaviour
         if (toggle)
         {
             toggle = false;
-        } else
+        } 
+        else
         {
             toggle = true;
         }
