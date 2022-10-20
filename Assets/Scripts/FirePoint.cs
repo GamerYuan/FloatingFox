@@ -24,7 +24,7 @@ public class FirePoint : MonoBehaviour
         float x = cursorPos.x;
         float y = cursorPos.y;
 
-        transform.position = new Vector2(x, y);
+        transform.position = new Vector2(cursorPos.x, cursorPos.y);
     }
 
     void FixedUpdate()

@@ -20,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y < riseSpeed)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + (riseSpeed * drag));
-        } 
+        }
+        if (rb.velocity.y > riseSpeed)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - (riseSpeed * drag));
+        }
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WindManager : MonoBehaviour
 {
-    public GameObject firePoint;
     public GameObject playerPrefab;
 
     public static WindManager instance;
