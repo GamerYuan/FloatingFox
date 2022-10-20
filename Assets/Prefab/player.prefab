@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3086027096112008151}
   - component: {fileID: 3086027096112007976}
   - component: {fileID: -6947809414453553847}
+  - component: {fileID: -8407074878034819584}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -137,5 +138,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 1.025
-  riseSpeed: 0
-  drag: 0.1
+  riseSpeed: 1
+  drag: 0.05
+--- !u!114 &-8407074878034819584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3086027096112008148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d032c94378ffb4c37b824f85db44734f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0

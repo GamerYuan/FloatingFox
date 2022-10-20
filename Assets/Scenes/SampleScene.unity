@@ -457,6 +457,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6947809414453553847, guid: 60f0fb4236464f544bf3ad26acb0e14c, type: 3}
+      propertyPath: drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -6947809414453553847, guid: 60f0fb4236464f544bf3ad26acb0e14c, type: 3}
+      propertyPath: riseSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3086027096112008148, guid: 60f0fb4236464f544bf3ad26acb0e14c, type: 3}
       propertyPath: m_Name
       value: player

@@ -6,20 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
-
     private Rigidbody2D rb;
-    private float direcX, direcY;
-
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    void Update() {
-        direcX = Input.GetAxisRaw("Horizontal");
-        direcY = Input.GetAxisRaw("Vertical");
-
-        rb.velocity = new Vector2(direcX * moveSpeed, direcY * moveSpeed);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -27,6 +16,11 @@ public class PlayerInteraction : MonoBehaviour
         {
             Debug.Log("Die");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (other.gameObject.CompareTag("Finished"))
+        {
+            Debug.Log("Stage Clear");
         }
     }
 }
