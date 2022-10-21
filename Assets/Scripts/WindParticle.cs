@@ -24,7 +24,7 @@ public class WindParticle : MonoBehaviour
         deltaRad = delta * Mathf.Deg2Rad;
     }
 
-    void Update()
+    void Start()
     {
         float x;
         float y;
