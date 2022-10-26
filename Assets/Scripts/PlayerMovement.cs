@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        SFXManager.instance.playFloat();
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x + (stopSpeed * drag), rb.velocity.y);
         }
-        if (rb.velocity.y > 0)
+        if (rb.velocity.x > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x - (stopSpeed * drag), rb.velocity.y);
         }

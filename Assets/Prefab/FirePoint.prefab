@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5453304525894049833}
   - component: {fileID: 5453304525894049832}
   - component: {fileID: 5453304525894049835}
-  - component: {fileID: 574190068446257652}
+  - component: {fileID: 1298274528910223843}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -101,7 +101,7 @@ MonoBehaviour:
   wind1: {fileID: 5878931990221893252, guid: 953b91e7b62aa784c9112c450094ab79, type: 3}
   wind2: {fileID: 5878931990221893252, guid: 8b5b2d50c1ced4e41ada800be138fc18, type: 3}
   wind3: {fileID: 5878931990221893252, guid: cd42ca7f3ddf6f44198d8b596caea2f8, type: 3}
---- !u!95 &574190068446257652
+--- !u!95 &1298274528910223843
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0

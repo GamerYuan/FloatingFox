@@ -9,9 +9,18 @@ public class FirePoint : MonoBehaviour
     public GameObject wind1;
     public GameObject wind2;
     public GameObject wind3;
+    
+    private Animator anim;
 
-    private bool toggle = true;
+    private bool toggle;
 
+    void Awake()
+    {
+        toggle = true;
+        SFXManager.instance.playFan();
+        anim = GetComponent<Animator>();
+        anim.StopPlayback();
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -44,10 +53,14 @@ public class FirePoint : MonoBehaviour
         if (toggle)
         {
             toggle = false;
+            SFXManager.instance.stopFan();
+            anim.StartPlayback();            
         } 
         else
         {
             toggle = true;
+            SFXManager.instance.playFan();
+            anim.StopPlayback();
         }
     }
 
