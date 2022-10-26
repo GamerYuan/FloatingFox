@@ -21,7 +21,7 @@ public class WindManager : MonoBehaviour
     void Update()
     {
         // Finds player object every frame with its name
-        GameObject player = GameObject.Find(playerPrefab.name);
+        GameObject player = GameObject.FindWithTag("Player");
 
         Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
