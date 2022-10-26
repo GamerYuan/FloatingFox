@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float riseSpeed;
+    public float stopSpeed;
     public float drag = 0.1f;
 
     Rigidbody2D rb;
@@ -24,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y > riseSpeed)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - (riseSpeed * drag));
+        }
+        if (rb.velocity.x < 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x + (stopSpeed * drag), rb.velocity.y);
+        }
+        if (rb.velocity.y > 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x - (stopSpeed * drag), rb.velocity.y);
         }
     }
 }

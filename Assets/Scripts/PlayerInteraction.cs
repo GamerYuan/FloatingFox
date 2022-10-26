@@ -21,6 +21,7 @@ public class PlayerInteraction : MonoBehaviour
         if (other.gameObject.CompareTag("Finished"))
         {
             Debug.Log("Stage Clear");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

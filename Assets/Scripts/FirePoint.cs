@@ -19,7 +19,7 @@ public class FirePoint : MonoBehaviour
             KeyToggle();
         }
 
-        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         float x = cursorPos.x;
         float y = cursorPos.y;
