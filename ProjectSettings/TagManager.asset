@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wind
-  - Hazards
   - Pop
-  - Finished
+  - Key
+  - Level
   layers:
   - Default
   - TransparentFX
