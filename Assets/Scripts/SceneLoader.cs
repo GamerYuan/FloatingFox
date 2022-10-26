@@ -8,7 +8,7 @@ public class SceneLoader : MonoBehaviour
     // Start is called before the first frame update
     public void LoadScene()
     {
-        SceneManager.LoadScene(1);
+        LevelChanger.instance.FadeToNextLevel();
     }
     
     public void ExitGame()
