@@ -10,6 +10,7 @@ public class WindParticle : MonoBehaviour
     public float speed = 10f;
     public float delta;
     public float desTime;
+    public float dragMultiplier;
 
     private float deltaRad;
 
@@ -47,6 +48,11 @@ public class WindParticle : MonoBehaviour
         // Destroys after set time to remove disruptance and ease system resources
         Destroy(gameObject, desTime);
 
+    }
+
+    void FixedUpdate()
+    {
+        rb.velocity -= rb.velocity * dragMultiplier * Time.fixedDeltaTime;
     }
 
     float CalculateX(float sinei, float cosinei, float d)
