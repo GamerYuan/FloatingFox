@@ -6,11 +6,12 @@ public class StringController : MonoBehaviour
 {
     private GameObject target;
     private bool attached = false;
+    private LineRenderer lineRenderer;
     float distance;
     // Start is called before the first frame update
     void Start()
     {
-        
+        lineRenderer = gameObject.GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
