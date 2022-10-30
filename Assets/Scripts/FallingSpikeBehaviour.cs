@@ -28,7 +28,7 @@ public class FallingSpikeBehaviour : MonoBehaviour
             moveSpeed = 0;
             Destroy(gameObject);
         }
-    }
+     }
     //Use rb.velocity but change orientation of the object
     IEnumerator moveSpike() {
         Destroy(gameObject, moveTime);

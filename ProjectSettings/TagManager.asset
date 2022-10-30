@@ -8,6 +8,8 @@ TagManager:
   - Pop
   - Key
   - Level
+  - Finished
+  - FallPop
   layers:
   - Default
   - TransparentFX

@@ -7,16 +7,15 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
-
     private Rigidbody2D rb;
 
-    [SerializeField] private UnityEvent onCollisionEntered;
+    [SerializeField] private UnityEvent onTriggerEnter;
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         switch (other.gameObject.tag)
         {
@@ -32,9 +31,21 @@ public class PlayerInteraction : MonoBehaviour
                 LevelChanger.instance.FadeToNextLevel();
                 SFXManager.instance.playVictory();
                 break;
+        }
+    }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "FallPop":
+                Debug.Log("Die");
+                LevelChanger.instance.FadeToLevel(SceneManager.GetActiveScene().buildIndex);
+                SFXManager.instance.playPop();
+                DeathCounter.instance.addDeathCount();
+                break;
             case "Key":
-                onCollisionEntered?.Invoke();
+                onTriggerEnter?.Invoke();
                 break;
         }
     }

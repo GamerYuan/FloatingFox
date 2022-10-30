@@ -12,7 +12,7 @@ public class FirePoint : MonoBehaviour
     
     private Animator anim;
 
-    private bool toggle;
+    public bool toggle;
 
     void Awake()
     {
