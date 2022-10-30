@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene(1);
+        DeathCounter.instance.resetDeathCount();
     }
     
     public void ExitGame()
