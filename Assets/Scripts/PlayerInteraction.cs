@@ -38,12 +38,6 @@ public class PlayerInteraction : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-            case "FallPop":
-                Debug.Log("Die");
-                LevelChanger.instance.FadeToLevel(SceneManager.GetActiveScene().buildIndex);
-                SFXManager.instance.playPop();
-                DeathCounter.instance.addDeathCount();
-                break;
             case "Key":
                 onTriggerEnter?.Invoke();
                 break;
