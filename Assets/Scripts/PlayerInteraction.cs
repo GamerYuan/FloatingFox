@@ -12,19 +12,38 @@ public class PlayerInteraction : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Pop")) 
-        {
-            Debug.Log("Die");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            SFXManager.instance.playPop();
-        }
+    //void OnTriggerEnter2D(Collider2D other) {
+    //    if (other.gameObject.CompareTag("Pop")) 
+    //    {
+    //        Debug.Log("Die");
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //        SFXManager.instance.playPop();
+    //    }
 
-        if (other.gameObject.CompareTag("Finished"))
+    //    if (other.gameObject.CompareTag("Finished"))
+    //    {
+    //        Debug.Log("Stage Clear");
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    //        SFXManager.instance.playVictory();
+    //    }
+    //}
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        switch (other.gameObject.tag)
         {
-            Debug.Log("Stage Clear");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            SFXManager.instance.playVictory();
+            case "Pop":
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                break;
+
+            case "Finish":
+                Debug.Log("Stage Clear");
+                break;
+
+            case "Key":
+                onCollisionEntered?.Invoke();
+                break;
         }
     }
+
 }
