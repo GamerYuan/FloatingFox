@@ -4,14 +4,16 @@ using UnityEngine.SceneManagement;
 public class LevelChanger : MonoBehaviour
 {
     public Animator animator;
-    public static LevelChanger instance;
 
     private int levelToLoad;
 
     // Update is called once per frame
-    void Awake()
+    void Update()
     {
-        instance = this;
+        if (Input.GetMouseButtonDown(0))
+        {
+            FadeToNextLevel();
+        }
     }
 
     public void FadeToNextLevel()
