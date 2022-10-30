@@ -169,6 +169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d032c94378ffb4c37b824f85db44734f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onCollisionEntered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1747158750
 MonoBehaviour:
   m_ObjectHideFlags: 0

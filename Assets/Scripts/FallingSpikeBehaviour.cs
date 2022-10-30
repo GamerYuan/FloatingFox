@@ -24,12 +24,14 @@ public class FallingSpikeBehaviour : MonoBehaviour
     }
 
      void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.name == "Platform" && moveYet) {
+        if (other.gameObject.name == "Wall" && moveYet) {
             moveSpeed = 0;
+            Destroy(gameObject);
         }
     }
     //Use rb.velocity but change orientation of the object
     IEnumerator moveSpike() {
+        Destroy(gameObject, moveTime);
         while (moveTime >= 0) {
             moveTime -= Time.deltaTime;
             transform.Translate(0, moveSpeed * Time.deltaTime, 0);

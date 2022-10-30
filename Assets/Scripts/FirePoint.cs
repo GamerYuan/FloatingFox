@@ -17,6 +17,7 @@ public class FirePoint : MonoBehaviour
     void Awake()
     {
         toggle = true;
+        // SFXManager.instance.stopFan();
         SFXManager.instance.playFan();
         anim = GetComponent<Animator>();
         anim.StopPlayback();
