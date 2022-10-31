@@ -7,9 +7,11 @@ public class ShooterBehaviour : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private float range;
     [SerializeField] private Transform playerCharacter;
+    [SerializeField] private Transform gun;
 
     private float disToPlayer; 
     private bool canShoot;
+    private Vector2 direction;
     private Vector2 moveDirection;
 
     public Transform shootPos;
@@ -20,14 +22,23 @@ public class ShooterBehaviour : MonoBehaviour
         canShoot = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void FixedUpdate() {
         disToPlayer = Vector2.Distance(transform.position, playerCharacter.position);
+
+        direction = (playerCharacter.transform.position - transform.position);
+        float rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        gun.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+
+        if (rotationZ < -90 || rotationZ > 90) {
+            if (gun.transform.eulerAngles.y == 0) {
+                gun.transform.rotation = Quaternion.Euler(180, 0f, -rotationZ);
+            }
+        }
 
         if (disToPlayer <= range) {
             if (canShoot) {
                 StartCoroutine(Shoot());
+                print("HI");
             }
         }
     }
@@ -38,7 +49,7 @@ public class ShooterBehaviour : MonoBehaviour
         yield return new WaitForSeconds(timeBTWShots);
         GameObject newBullet = Instantiate(bullet, shootPos.position, Quaternion.identity);
 
-        moveDirection = (playerCharacter.transform.position - transform.position).normalized * shootSpeed;
+        moveDirection = direction.normalized * shootSpeed;
 
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(moveDirection.x, moveDirection.y);
         canShoot = true;

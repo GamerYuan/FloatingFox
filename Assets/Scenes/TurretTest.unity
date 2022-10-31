@@ -259,11 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574716181981861010, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.91
+      value: -5.7
       objectReference: {fileID: 0}
     - target: {fileID: 2574716181981861010, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.26
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 2574716181981861010, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -296,6 +296,22 @@ PrefabInstance:
     - target: {fileID: 2574716181981861010, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorBehaviour, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8223833150269175996, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: m_Name
@@ -1363,6 +1379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3248934544244896846, guid: 1c6eddd65e1604b12a39807c5255e078, type: 3}
+      propertyPath: range
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: -3248934544244896846, guid: 1c6eddd65e1604b12a39807c5255e078, type: 3}
       propertyPath: playerCharacter
       value: 

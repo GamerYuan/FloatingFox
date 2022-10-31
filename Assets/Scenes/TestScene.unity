@@ -237,11 +237,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4cc2d831c548433a8348ebc951380f8, type: 3}
---- !u!1 &454217015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1819924328292982429, guid: d4cc2d831c548433a8348ebc951380f8, type: 3}
-  m_PrefabInstance: {fileID: 454217013}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &454217016 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 454217016, guid: d4cc2d831c548433a8348ebc951380f8, type: 3}
@@ -362,13 +357,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 454217015}
+      objectReference: {fileID: 454217016}
     - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 454217016}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Open
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: onTriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DoorBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8223833150269175996, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: m_Name
       value: PlayerPrefab

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 91655400}
-  - component: {fileID: 425627617}
   m_Layer: 0
   m_Name: ShootPos
   m_TagString: Untagged
@@ -24,28 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91655399}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.58, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.85000014, y: 0.06000018, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1705911718233047725}
-  m_Father: {fileID: 6555808019894349441}
+  m_Children: []
+  m_Father: {fileID: 1705911718233047725}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &425627617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91655399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8f8fabea50bae0438c19d36f348eb87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 7
 --- !u!1 &5122139614760175608
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +42,7 @@ GameObject:
   - component: {fileID: 1705911718233047725}
   - component: {fileID: 3709325974672703106}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,12 +55,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5122139614760175608}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5799999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 91655400}
+  m_Children:
+  - {fileID: 91655400}
+  m_Father: {fileID: 6555808019894349441}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3709325974672703106
@@ -161,7 +147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 91655400}
+  - {fileID: 1705911718233047725}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -256,8 +242,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3804014140033625364, guid: c79412eb641ed4f8d9d9693a2153b942, type: 3}
-  range: 7
+  range: 20
   playerCharacter: {fileID: 2574716181981861010, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+  gun: {fileID: 1705911718233047725}
   shootPos: {fileID: 91655400}
   timeBTWShots: 1
   shootSpeed: 10
