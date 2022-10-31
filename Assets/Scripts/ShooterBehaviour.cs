@@ -26,19 +26,25 @@ public class ShooterBehaviour : MonoBehaviour
         disToPlayer = Vector2.Distance(transform.position, playerCharacter.position);
 
         direction = (playerCharacter.transform.position - transform.position);
-        float rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        gun.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
-
-        if (rotationZ < -90 || rotationZ > 90) {
-            if (gun.transform.eulerAngles.y == 0) {
-                gun.transform.rotation = Quaternion.Euler(180, 0f, -rotationZ);
-            }
-        }
 
         if (disToPlayer <= range) {
             if (canShoot) {
                 StartCoroutine(Shoot());
-                print("HI");
+            }
+            rotateGun();
+        }
+    }
+
+    private void rotateGun()
+    {
+        float rotationZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        gun.transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+
+        if (rotationZ < -90 || rotationZ > 90)
+        {
+            if (gun.transform.eulerAngles.y == 0)
+            {
+                gun.transform.rotation = Quaternion.Euler(180, 0f, -rotationZ);
             }
         }
     }
