@@ -16,11 +16,10 @@ public class FirePoint : MonoBehaviour
 
     void Awake()
     {
-        toggle = true;
+        toggle = false;
         // SFXManager.instance.stopFan();
-        SFXManager.instance.playFan();
         anim = GetComponent<Animator>();
-        anim.StopPlayback();
+        anim.StartPlayback();
     }
     void Update()
     {

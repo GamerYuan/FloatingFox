@@ -24,7 +24,7 @@ public class FallingSpikeBehaviour : MonoBehaviour
     }
 
      void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.name == "Wall" && moveYet) {
+        if (other.gameObject.layer == 7 && moveYet) {
             moveSpeed = 0;
             Destroy(gameObject);
         }

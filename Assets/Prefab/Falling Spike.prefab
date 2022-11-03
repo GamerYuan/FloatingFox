@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1448350716661295810}
   - component: {fileID: 1448350716661295869}
   - component: {fileID: 2780516335347313757}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Falling Spike
   m_TagString: Pop
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1077650128, guid: f9696b2eaea4191479300c925df09bb0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 679278f43bce8104f9812c2c2c529511, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,12 +148,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.040819645, y: -0.2024908}
-      - {x: -0.2883265, y: -0.35936785}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.51291525, y: -0.49331212}
-      - {x: 0.27505225, y: -0.35529637}
+    - - {x: -0.0045182705, y: 0.08464992}
+      - {x: -0.50511503, y: -0.19553214}
+      - {x: -0.31099558, y: -0.1848129}
+      - {x: -0.16834903, y: -0.18877548}
+      - {x: -0.040985584, y: -0.1887753}
+      - {x: 0.17974603, y: -0.18586552}
+      - {x: 0.31401706, y: -0.19267082}
+      - {x: 0.50929826, y: -0.18905699}
 --- !u!1 &6983599834919879929
 GameObject:
   m_ObjectHideFlags: 0

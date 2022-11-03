@@ -10,6 +10,7 @@ TagManager:
   - Level
   - Finished
   - FallPop
+  - Cross
   layers:
   - Default
   - TransparentFX

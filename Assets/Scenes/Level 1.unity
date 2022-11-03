@@ -1484,6 +1484,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7508186419499422562, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
+      propertyPath: redCrossPrefab
+      value: 
+      objectReference: {fileID: 6023013473242424469, guid: 7d567ac992b68f247b4ed13b413d6de2, type: 3}
     - target: {fileID: 8223833150269175996, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
       propertyPath: m_Name
       value: PlayerPrefab
