@@ -53,13 +53,13 @@ public class FirePoint : MonoBehaviour
         if (toggle)
         {
             toggle = false;
-            SFXManager.instance.stopFan();
+            SFXManager.instance.StopFan();
             anim.StartPlayback();            
         } 
         else
         {
             toggle = true;
-            SFXManager.instance.playFan();
+            SFXManager.instance.PlayFan();
             anim.StopPlayback();
         }
     }

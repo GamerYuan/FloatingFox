@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField] private GameObject redCrossPrefab;
     
     private Rigidbody2D rb;
 
@@ -20,16 +19,17 @@ public class PlayerInteraction : MonoBehaviour
         {
             case "Pop":
                 Vector3 pos = other.GetContact(0).point;
-                Instantiate(redCrossPrefab, pos, Quaternion.identity);
+                DeathManager.instance.OnDeath(pos);
                 LevelChanger.instance.FadeToLevel(SceneManager.GetActiveScene().buildIndex);
-                SFXManager.instance.playPop();
-                DeathCounter.instance.addDeathCount();
+                SFXManager.instance.PlayPop();
+                SFXManager.instance.StopFall();
+                DeathCounter.instance.AddDeathCount();
                 break;
 
             case "Finished":
                 LevelChanger.instance.FadeToNextLevel();
-
-                SFXManager.instance.playVictory();
+                SFXManager.instance.PlayVictory();
+                DeathManager.instance.OnClear();
                 break;
         }
     }

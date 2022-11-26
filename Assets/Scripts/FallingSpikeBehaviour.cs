@@ -20,6 +20,7 @@ public class FallingSpikeBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && moveYet == false) {
             moveYet = true;
             StartCoroutine(moveSpike());
+            SFXManager.instance.PlayFall();
         }
     }
 
@@ -27,6 +28,7 @@ public class FallingSpikeBehaviour : MonoBehaviour
         if (other.gameObject.layer == 7 && moveYet) {
             moveSpeed = 0;
             Destroy(gameObject);
+            SFXManager.instance.StopFall();
         }
      }
     //Use rb.velocity but change orientation of the object

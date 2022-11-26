@@ -24,13 +24,13 @@ public class DeathCounter : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void addDeathCount()
+    public void AddDeathCount()
     {
         death += 1;
         Debug.Log("Death = " + death);
     }
 
-    public void resetDeathCount()
+    public void ResetDeathCount()
     {
         death = 0;
         Debug.Log("Death reset");

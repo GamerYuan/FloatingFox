@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3804014140033625364, guid: c79412eb641ed4f8d9d9693a2153b942, type: 3}
-  range: 20
+  range: 5
   playerCharacter: {fileID: 2574716181981861010, guid: fccc247c4bace4e4c9e4ae5475036cd7, type: 3}
   gun: {fileID: 1705911718233047725}
   shootPos: {fileID: 91655400}

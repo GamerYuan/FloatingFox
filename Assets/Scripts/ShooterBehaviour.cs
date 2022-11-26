@@ -29,6 +29,7 @@ public class ShooterBehaviour : MonoBehaviour
 
         if (disToPlayer <= range) {
             if (canShoot) {
+                SFXManager.instance.PlayShoot();
                 StartCoroutine(Shoot());
             }
             rotateGun();

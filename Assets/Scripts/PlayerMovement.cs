@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        SFXManager.instance.playFloat();
+        SFXManager.instance.PlayFloat();
     }
 
     // Update is called once per frame

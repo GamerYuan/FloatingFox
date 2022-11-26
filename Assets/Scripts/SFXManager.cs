@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
-    public AudioSource pop;
-    public AudioSource fan;
-    public AudioSource victory;
-    public AudioSource floating;
+    [SerializeField] private AudioSource pop;
+    [SerializeField] private AudioSource fan;
+    [SerializeField] private AudioSource victory;
+    [SerializeField] private AudioSource floating;
+    [SerializeField] private AudioSource shoot;
+    [SerializeField] private AudioSource fall;
+    
 
     public static SFXManager instance;
     
@@ -19,25 +22,36 @@ public class SFXManager : MonoBehaviour
         DontDestroyOnLoad(instance);
     }
 
-    public void playPop()
+    public void PlayPop()
     {
         pop.Play();
     }
-    public void playFan()
+    public void PlayFan()
     {
         fan.Play();
     }
-    public void stopFan()
+    public void StopFan()
     {
         fan.Stop();
     }
-    public void playVictory()
+    public void PlayVictory()
     {
         victory.Play();
     }
-    public void playFloat()
+    public void PlayFloat()
     {
         floating.Play();
     }
-
+    public void PlayShoot()
+    {
+        shoot.Play();
+    }
+    public void PlayFall()
+    {
+        fall.Play();
+    }
+    public void StopFall()
+    {
+        fall.Stop();
+    }
 }
