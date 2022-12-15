@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
+    public int level;
     // Start is called before the first frame update
     public void LoadScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level " + level.ToString());
         DeathCounter.instance.ResetDeathCount();
     }
     
@@ -16,5 +17,10 @@ public class SceneLoader : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit Game");
+    }
+
+    public void LevelMenu() 
+    {
+        SceneManager.LoadScene(5);
     }
 }
