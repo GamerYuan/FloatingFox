@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: range
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: -3248934544244896846, guid: 1c6eddd65e1604b12a39807c5255e078, type: 3}
+      propertyPath: playerCharacter
+      value: 
+      objectReference: {fileID: 1261566357}
     - target: {fileID: 6555808019894349441, guid: 1c6eddd65e1604b12a39807c5255e078, type: 3}
       propertyPath: m_RootOrder
       value: 2
